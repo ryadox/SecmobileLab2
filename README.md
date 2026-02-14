@@ -92,6 +92,57 @@ Il s'agit d'une série de vérifications cryptographiques séquentielles où cha
 
 Criticité de l'intégrité au démarrage :
 Si le processus d'amorçage est compromis à la racine, toutes les protections logicielles ultérieures (sandboxing, gestion des permissions, mécanismes de l'OS) peuvent être contournées de manière invisible. C'est l'équivalent d'une forteresse imprenable dont la porte principale aurait été compromise avant même le déploiement des gardes.
+.
+.
+.
+. 
+Etape suivante :: L'Évolution vers AVB (Android Verified Boot)
+Concept Simplifié : > AVB (Android Verified Boot) est la version 2.0 du mécanisme de Verified Boot. C'est une évolution majeure, plus moderne et flexible. Concrètement, c'est l'équivalent de passer d'une simple serrure mécanique à un système de sécurité électronique programmable.
+
+Apports Majeurs d'AVB
+L'implémentation d'AVB modernise la chaîne de confiance à travers trois points fondamentaux :
+
+Vérification d'intégrité moderne : AVB standardise et centralise la validation cryptographique en regroupant les signatures et les hachages de toutes les partitions au sein d'une seule partition dédiée (nommée vbmeta).
+
+Protection contre le Rollback : L'architecture introduit des compteurs matériels sécurisés (Rollback Indexes) qui lient de manière irrévocable la version de l'OS au matériel physique de l'appareil.
+
+Pérennisation des correctifs : Cette combinaison technique garantit qu'une vulnérabilité corrigée par une mise à jour logicielle est définitivement neutralisée et ne pourra pas être réintroduite.
+
+Focus sur la Protection Anti-Rollback
+La protection anti-rollback (ou protection contre la rétrogradation) est une défense critique contre les attaques physiques ou locales persistantes.
+
+Le mécanisme : Cette protection empêche catégoriquement l'installation ou le démarrage d'anciennes versions du système d'exploitation. Si le compteur matériel détecte une version d'OS inférieure à celle attendue, le processus d'amorçage est immédiatement interrompu.
+
+L'enjeu de sécurité : Les attaquants tentent fréquemment de réinstaller d'anciens firmwares (downgrade attacks) dans le but d'exploiter des failles de sécurité connues (CVE) qui ont été corrigées dans les versions récentes.
+
+L'analogie : Pour reprendre l'image précédente, l'anti-rollback agit comme un mécanisme qui empêcherait physiquement quelqu'un de remplacer votre serrure électronique moderne de haute sécurité par un ancien modèle obsolète et facilement crochetable.
+
+
+Got a problemmm :: 
+<img width="1908" height="1200" alt="image" src="https://github.com/user-attachments/assets/0ef48ab7-ac14-4b3f-948e-514cc2699eff" />
+
+
+
+Root = privilèges super-utilisateur :: C'est un acces totale au systeme ;
+Cela modifie les protections et la confiance du système (rwx for user , group , others )
+Utile en laboratoire pour observer certains comportements (pas de restriction par manifacture comme google , samsung , xiaomi , ...)
+Risqué, donc nécessite isolement + traçabilité + reset 
+
+
+"En labo, un environnement privilégié peut aider à…" Observer des artefacts système normalement inaccessibles ;;; 
+
+
+Matrices des risques ::
+
+<img width="783" height="600" alt="image" src="https://github.com/user-attachments/assets/769169e9-0753-4f58-985b-33b3362f95cc" />
+
+
+L'OWASP MASVS est le standard méthodologique mondial de référence pour évaluer et certifier la sécurité des applications mobiles.
+L'exigence MASVS-STORAGE-1 cible la protection des données au repos et interdit tout stockage local en clair.
+Elle impose le chiffrement systématique des données sensibles (tokens, mots de passe) via des composants natifs comme l'Android Keystore.
+L'exigence MASVS-NETWORK-1 sécurise les données en transit pour contrer les attaques d'interception de type Man-in-the-Middle.
+Elle rend obligatoire l'utilisation de canaux TLS chiffrés avec une validation stricte de la chaîne de certificats du serveur.
+
 
 
 
