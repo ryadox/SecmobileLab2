@@ -143,6 +143,24 @@ Elle impose le chiffrement systématique des données sensibles (tokens, mots de
 L'exigence MASVS-NETWORK-1 sécurise les données en transit pour contrer les attaques d'interception de type Man-in-the-Middle.
 Elle rend obligatoire l'utilisation de canaux TLS chiffrés avec une validation stricte de la chaîne de certificats du serveur.
 
+OWASP MASTG (Test) :: 
+
+<img width="1915" height="1200" alt="image" src="https://github.com/user-attachments/assets/3b09fb36-aa41-4d2a-9c50-7f04a45f85cc" />
+
+Traçabilité : fiche environnement :: 
+
+<img width="1915" height="1200" alt="image" src="https://github.com/user-attachments/assets/6976e487-7314-4f0c-be27-8a557924fdde" />
+
+<img width="1915" height="1200" alt="image" src="https://github.com/user-attachments/assets/6035257a-b466-4c56-b81e-2ab735c1916f" />
+
+Remise a Zero de l'AVD : 
+
+<img width="1915" height="1200" alt="image" src="https://github.com/user-attachments/assets/11f52d31-b522-45a4-852f-3ef2315f4911" />
+
+
+
+
+
 
 
 
