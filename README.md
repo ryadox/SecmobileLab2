@@ -1,5 +1,9 @@
 # SecmobileLab2
 
+Objectif : "Comprendre rooting et impacts" ;
+Données : "Fictives" ;
+Réseau : "Test" ;
+
 utilisation de AVD :: Android Virtual Machine :
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/20c777e6-deb5-47a2-a81b-8071a70fef93" />
 
@@ -32,6 +36,11 @@ Option premessive :
 La bonne pratique de journalisation :
 
 <img width="1917" height="1191" alt="image" src="https://github.com/user-attachments/assets/2e1d9960-3aad-4d8b-b5d4-a178a02a3122" />
+
+L'App utiliser : version : -- final 6 years ago --
+
+<img width="1917" height="1191" alt="image" src="https://github.com/user-attachments/assets/28eba7a2-9cea-4849-8d85-03b1e225018e" />
+
 
 
 
