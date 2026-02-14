@@ -11,7 +11,7 @@ Comme dans l'image la commande #adb devices montre a machine android virtuelle ;
 ..> une errure est servenue :  ( par Gemini LLM : you must create a new AVD using a "Google APIs" system image instead of a "Google Play" one. )
 <img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/509467b1-6208-47e3-ab3a-16844594cb1c" />
 
-On change vers une machine Google APIs :
+On change vers une machine Open Source :
 
 
 
